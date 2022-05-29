@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App74.Views.AdminPage2"
+             xmlns:cardView="clr-namespace:CardView;assembly=CardView">
+
+
+    <ContentPage.Content>
+
+        <StackLayout>
+
+
+
+            <Label Text="Notification"
+                HorizontalOptions="Center"  FontSize="Medium" TextColor="Black" FontAttributes="Bold"></Label>
+
+
+            <Grid Padding="10" Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+
+                <StackLayout Orientation="Vertical"  > 
+
+                    <Button Text="delete"    Clicked="Button1_Clicked"></Button>
+                    <Button Text="change"    Clicked="Button3_Clicked"  ></Button>
+
+                    <Button Text="register"     Clicked="Button2_Clicked"   ></Button>
+                </StackLayout>
+
+
+
+
+
+            </Grid>
+
+            <ListView x:Name="deleteListView" 
+                      ItemTapped="ListView_ItemTapped"
+
+                     ItemsSource="{Binding AcceptDeletes}"
+                  HasUnevenRows="True"
+                      Margin="0,8,0,0"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+
+                            <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+
+
+                                <StackLayout>
+                                    <cardView:CardView
+                                    
+                                BackgroundColor="white"
+                                 
+                                CardViewHasShadow="True"
+                                HeightRequest="220">
+                                        <cardView:CardView.CardViewContent>
+                                            <StackLayout
+                                        Padding="10"
+                                        HorizontalOptions="Center"
+                                        Spacing="10"
+                                        VerticalOptions="Center">
+
+
+
+
+                                                <Grid>
+                                                    <StackLayout >
+                                                        <Frame CornerRadius="100" 
+                                                           HeightRequest="70"
+                                                           WidthRequest="70"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+                                                            <Image Source="course.png" 
+                                                            HorizontalOptions="Center"
+                                                            VerticalOptions="Center" />
+                                                        </Frame>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Vertical"    Margin="82,0,0,0"    >
+                                                        <StackLayout Orientation="Horizontal"        >
+
+
+
+
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                FontAttributes="Bold"
+                                                TextColor="Black"
+                                                Text="{Binding StudentName}" />
+
+
+                                                        </StackLayout>
+
+                                                        <StackLayout Orientation="Horizontal" >
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                TextColor="Black"
+                                                Text="{Binding Description}" />
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                FontSize="Medium"
+                                                TextColor="Black"
+                                                 />
+
+                                                        </StackLayout>
+
+
+                                                        <StackLayout Orientation="Horizontal" >
+                                                            <Button
+                                                                
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                
+                                                ImageSource="delete.png"
+                                                BackgroundColor="Transparent"
+                                                TextColor="Black"
+                                                 />
+                                                            
+
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                </Grid>
+                                            </StackLayout>
+                                        </cardView:CardView.CardViewContent>
+                                    </cardView:CardView>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="registerListView" 
+                      ItemTapped="ListView2_ItemTapped"
+
+                     ItemsSource="{Binding AcceptRegister}"
+                  HasUnevenRows="True"
+                      Margin="0,8,0,0"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+
+                            <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+
+
+                                <StackLayout>
+                                    <cardView:CardView
+                                    
+                                BackgroundColor="white"
+                                 
+                                CardViewHasShadow="True"
+                                HeightRequest="220">
+                                        <cardView:CardView.CardViewContent>
+                                            <StackLayout
+                                        Padding="10"
+                                        HorizontalOptions="Center"
+                                        Spacing="10"
+                                        VerticalOptions="Center">
+
+
+
+
+                                                <Grid>
+                                                    <StackLayout >
+                                                        <Frame CornerRadius="100" 
+                                                           HeightRequest="70"
+                                                           WidthRequest="70"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+                                                            <Image Source="course.png" 
+                                                            HorizontalOptions="Center"
+                                                            VerticalOptions="Center" />
+                                                        </Frame>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Vertical"    Margin="82,0,0,0"    >
+                                                        <StackLayout Orientation="Horizontal"        >
+
+
+
+
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                FontAttributes="Bold"
+                                                TextColor="Black"
+                                                Text="{Binding StudentName}" />
+
+
+                                                        </StackLayout>
+
+                                                        <StackLayout Orientation="Horizontal" >
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                TextColor="Black"
+                                                Text="{Binding Description}" />
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                FontSize="Medium"
+                                                TextColor="Black"
+                                                 />
+
+                                                        </StackLayout>
+
+
+                                                        <StackLayout Orientation="Horizontal" >
+                                                            <Button
+                                                                
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                
+                                                ImageSource="delete.png"
+                                                BackgroundColor="Transparent"
+                                                TextColor="Black"
+                                                 />
+
+
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                </Grid>
+                                            </StackLayout>
+                                        </cardView:CardView.CardViewContent>
+                                    </cardView:CardView>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="changeListView" 
+                      ItemTapped="ListView3_ItemTapped"
+
+                     ItemsSource="{Binding Change}"
+                  HasUnevenRows="True"
+                      Margin="0,8,0,0"
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+
+                            <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+
+
+                                <StackLayout>
+                                    <cardView:CardView
+                                    
+                                BackgroundColor="white"
+                                 
+                                CardViewHasShadow="True"
+                                HeightRequest="220">
+                                        <cardView:CardView.CardViewContent>
+                                            <StackLayout
+                                        Padding="10"
+                                        HorizontalOptions="Center"
+                                        Spacing="10"
+                                        VerticalOptions="Center">
+
+
+
+
+                                                <Grid>
+                                                    <StackLayout >
+                                                        <Frame CornerRadius="100" 
+                                                           HeightRequest="70"
+                                                           WidthRequest="70"
+                                                           HorizontalOptions="Start"
+                                                           Padding="0"
+                                                           IsClippedToBounds="True"
+                                                           >
+                                                            <Image Source="course.png" 
+                                                            HorizontalOptions="Center"
+                                                            VerticalOptions="Center" />
+                                                        </Frame>
+                                                    </StackLayout>
+
+                                                    <StackLayout Orientation="Vertical"    Margin="82,0,0,0"    >
+                                                        <StackLayout Orientation="Horizontal"        >
+
+
+
+
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                FontAttributes="Bold"
+                                                TextColor="Black"
+                                                Text="{Binding StudentName}" />
+
+
+                                                        </StackLayout>
+
+                                                        <StackLayout Orientation="Horizontal" >
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                TextColor="Black"
+                                                Text="{Binding Description}" />
+                                                            <Label
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                FontSize="Medium"
+                                                TextColor="Black"
+                                                 />
+
+                                                        </StackLayout>
+
+
+                                                        <StackLayout Orientation="Horizontal" >
+                                                            <Button
+                                                                
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                Margin="15,0,0,0"
+                                                FontSize="Medium"
+                                                
+                                                ImageSource="delete.png"
+                                                BackgroundColor="Transparent"
+                                                TextColor="Black"
+                                                 />
+
+
+                                                        </StackLayout>
+                                                    </StackLayout>
+                                                </Grid>
+                                            </StackLayout>
+                                        </cardView:CardView.CardViewContent>
+                                    </cardView:CardView>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App74.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    
+    <ContentPage.Content>
+        
+        
+        
+        <StackLayout Padding="15" VerticalOptions="Start">
+
+                <StackLayout >
+                <Image Source="logo1.jpg" WidthRequest="250" Margin="0,30"  ></Image>
+                <Label Text="Sign In" FontAttributes="Bold" FontSize="Title" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+
+            </StackLayout>
+
+            <StackLayout  Margin="20,20" >
+                <Frame Margin="0,5" BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                    <StackLayout Orientation="Horizontal" HeightRequest="40" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                        <Image Source="email.png" Aspect="AspectFill" Margin="0"/>
+                        <Entry  x:Name="TxtEmail" Placeholder="Enter your Email"
+                           HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="0,5"
+                           BackgroundColor="Transparent"
+                           BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                    <StackLayout Orientation="Horizontal" HeightRequest="40" WidthRequest="40" Padding="0" Margin="5">
+
+                        <Image Source="password.gif" Aspect="AspectFill" Margin="0"/>
+                        <Entry x:Name="TxtPassword" IsPassword="True"
+                           Placeholder="Enter your Password"  HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+
+                    </StackLayout>
+                </Frame>
+
+
+                <Button 
+                            BackgroundColor="Orange"
+                            WidthRequest="200"
+                           
+                            BorderWidth="1.5"
+                            CornerRadius="20"
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Margin="0,10"
+                            Text="Login" x:Name="BtnSignIn"
+                            Clicked="BtnSignIn_Clicked"
+                           Command = "{Binding AddCoachIdCommand}"
+                        
+                            />
+
+                <Grid>
+
+
+                    <Label Text="Create new account "
+                            
+                           TextColor="Blue"
+                           HorizontalOptions="Center"
+                           FontSize="Medium"
+                           x:Name="lblRegister">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="registerTap"
+                                                  Tapped="registerTap_Tapped">
+
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

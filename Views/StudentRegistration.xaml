@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:App74"
+             xmlns:local="clr-namespace:App74.ViewModels"
+             xmlns:behavior1="clr-namespace:App74.Views"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:behavior11="clr-namespace:App74.Views"
+             mc:Ignorable="d"
+             x:Class="App74.Views.StudentRegistration" BackgroundColor="White"> 
+    
+    <ContentPage.Content>
+
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+
+            </Grid.RowDefinitions>
+
+            
+                
+            
+            <StackLayout Grid.Row="0" VerticalOptions="Start">
+                <StackLayout >
+                    <Image Source="logo1.jpg" WidthRequest="250" HeightRequest="150" ></Image>
+                    <Label Text="Student Regestration" FontAttributes="Bold" FontSize="Title" TextColor="Gray" HorizontalTextAlignment="Center"></Label>
+
+                </StackLayout>
+
+               
+
+
+
+                <StackLayout Margin="20,20" >
+
+
+
+                    <Frame Margin="0,5" BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                        <StackLayout Orientation="Horizontal" HeightRequest="40" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                            <Image Source="name.png" Aspect="AspectFill" Margin="0"/>
+
+                            <Entry Text="{Binding Name}" x:Name="TxtName" Placeholder="Name" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" ></Entry>
+
+                        </StackLayout>
+                    </Frame>
+
+
+
+                    <Frame Margin="0,5" BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                        <StackLayout Orientation="Horizontal" HeightRequest="40" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                            <Image Source="number.png" Aspect="AspectFill" Margin="0"/>
+
+                            <Entry Text="{Binding StudentNumber}" x:Name="TxtNumber" Placeholder="Number" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" ></Entry>
+
+                        </StackLayout>
+                    </Frame>
+
+
+
+                    <Frame Margin="0,5" BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                        <StackLayout Orientation="Horizontal" HeightRequest="40" WidthRequest="30" Padding="0" Margin="5">
+
+
+
+                            <Image Source="email.png" Aspect="AspectFill" Margin="0"/>
+                           
+                            <Entry Text="{Binding Email}" x:Name="TxtEmail" Placeholder="Email" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" ></Entry>
+
+                        </StackLayout>
+                    </Frame>
+
+                    
+
+                   
+
+
+                    <Frame Margin="0,5"
+                           BackgroundColor="Transparent"
+                           BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                        <StackLayout Orientation="Horizontal" HeightRequest="40" WidthRequest="40" Padding="0" Margin="5">
+
+                            <Image Source="password.gif" Aspect="AspectFill" Margin="0"/>
+
+                            <Entry x:Name="TxtPassword" Text="{Binding Password}" IsPassword="True" Placeholder="Password" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Margin="0,5" BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                        <StackLayout Orientation="Horizontal"  HeightRequest="40" WidthRequest="40"  Padding="0" Margin="5">
+
+                            <Image Source="password.gif" Aspect="AspectFill" Margin="0"/>
+
+                            <Entry x:Name="TxtConfirmPass" IsPassword="True" Placeholder="Re-type Password" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"></Entry>
+                        </StackLayout>
+                    </Frame>
+
+                    
+
+
+                    <Button 
+                            BackgroundColor="Orange"
+                            WidthRequest="200"
+                           
+                            BorderWidth="1.5"
+                            CornerRadius="20"
+                            FontAttributes="Bold"
+                            FontSize="Subtitle"
+                            Margin="0,10"
+                            Text="Regester" x:Name="ButtonRegister"
+                        Clicked="ButtonRegister_Clicked"
+                            Command="{Binding AddStudentsCommand}"/>
+
+
+
+                </StackLayout>
+            </StackLayout>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

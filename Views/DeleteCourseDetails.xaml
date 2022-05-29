@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App74.Views.DeleteCourseDetails">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="nameshow" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Medium" FontAttributes="Bold"></Label>
+            <Label x:Name="Snumshow" HorizontalTextAlignment="Center"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"        ></Label>
+            <Label x:Name="cnumshow" HorizontalTextAlignment="Center"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"        ></Label>
+
+            <Label x:Name="Dnumshow" HorizontalTextAlignment="Center"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"        ></Label>
+            <Label x:Name="descriptionshow" HorizontalTextAlignment="Center"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"        ></Label>
+            <Label x:Name="emailshow" HorizontalTextAlignment="Center"   TextColor="Black" FontSize="Medium" FontAttributes="Bold"        ></Label>
+
+
+            <Button Clicked="reject_Clicked" Text="Reject"  BackgroundColor="red"></Button>
+            <Button Clicked="accept_Clicked"  x:Name="acceptButton"      Text="Accept" Background="green"   Command="{Binding AddAcceptStudentCommand}"></Button>
+            <Button Clicked="Go_Clicked"  x:Name="gotoButton"        Text="Go to " Background="orange"   Command="{Binding AddAcceptStudentCommand}"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
